@@ -21,7 +21,24 @@ function calculate(a, op, b) {
   }
 }
 
-module.exports = { calculate };
+function modulo(a, b) {
+  a = parseFloat(a);
+  b = parseFloat(b);
+  return b !== 0 ? a % b : null;
+}
+
+function power(base, exponent) {
+  base = parseFloat(base);
+  exponent = parseFloat(exponent);
+  return Math.pow(base, exponent);
+}
+
+function squareRoot(n) {
+  n = parseFloat(n);
+  return n >= 0 ? Math.sqrt(n) : null;
+}
+
+module.exports = { calculate, modulo, power, squareRoot };
 
 function prompt() {
   rl.question('Enter calculation (e.g. 2 + 2): ', (input) => {
